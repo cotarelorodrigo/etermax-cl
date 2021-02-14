@@ -1,0 +1,12 @@
+version: '2.1'
+services:
+  postgres:
+      image: postgres:9.6
+      environment:
+          - POSTGRES_USER=etermax
+          - POSTGRES_PASSWORD=etermax
+          - POSTGRES_DB=etermax_db
+      ports: 
+          - "32769:5432"
+      volumes:
+          - ./create_tables.sql:/docker-entrypoint-initdb.d/1-create_tables.sql
