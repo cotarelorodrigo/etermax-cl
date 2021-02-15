@@ -1,3 +1,16 @@
+CREATE TABLE info_movimientos(
+	fecha date,
+	descripcion_de_cliente text,
+	descripcion_de_proveedor text,
+	descripcion_de_producto text,
+	descripcion_de_marca text,
+	cantidad integer,
+	costo integer,
+	venta integer,
+	ganancia_neta integer
+);
+
+INSERT INTO info_movimientos
 select 
 dm.fecha, 
 dc.descripcion as descripcion_de_cliente,
