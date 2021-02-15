@@ -6,7 +6,8 @@ INSERT INTO data_clientes (cod_cliente, descripcion) VALUES
 INSERT INTO data_marcas (cod_marca, descripcion) VALUES
 (200, 'skil'),
 (201, 'boch'),
-(202, 'dremel');
+(202, 'dremel'),
+(204, 'arforj');
 
 INSERT INTO data_proveedores (cod_proveedor, descripcion) VALUES
 (300, 'prov1'),
@@ -76,6 +77,6 @@ INSERT INTO data_movimientos (cod_prod, cod_cliente, fecha, cantidad, costo, ven
 (410, 103, '2001-01-08 03:00:00', 3, 800, 900),
 (413, 102, '2020-01-09', 2, 750, 900),
 (425, 102, '2020-01-09', 2, 4000, 4300),
-(407, 101, '2020-01-09', 3, 3500, 3700),
+(407, 101, '2020-01-10', 3, 3500, 3700),
 (407, 102, '2020-01-09', 4, 6500, 6700),
-(407, 103, '2020-01-09', 5, 900, 1100);
+(407, 103, '2020-01-12', 5, 900, 1100);
