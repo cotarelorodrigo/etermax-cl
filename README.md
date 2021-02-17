@@ -1,7 +1,8 @@
+## Ejercico 1 - Manejo de Datos
+En la carpeta redshift
 
-
-
-
+## Ejercico 2 - Algo de python
+En la carpeta python
 
 ## Ejercico 3 - Preguntas en general.
 
