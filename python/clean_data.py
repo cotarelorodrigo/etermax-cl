@@ -1,7 +1,5 @@
 import pandas as pd
 
-INPUTH_FILE = 'Datos .tsv'
-
 class DataTransform:
 
 	def __init__(self, path, sep, input_encoding):
@@ -21,11 +19,17 @@ class DataTransform:
 		self.encoding = encoding
 		return self
 
-	def save(self):
-		output_path = self.path.split(".")[0].strip() + "_transofrmed.csv"
+	def save(self, output_path):
 		self.df.to_csv(output_path, sep=self.delimiter, encoding=self.encoding, index=False)
 
 
 if __name__ == "__main__":
-	dt = DataTransform(path=INPUTH_FILE, sep='\t', input_encoding='UTF-16LE')
-	dt.set_delimiter("|").set_encoding("utf-8").save()
+	import argparse
+
+	parser = argparse.ArgumentParser()
+	parser.add_argument('-i', '--input_path', help="path to input file")
+	parser.add_argument('-o', '--output_path', help="output path to save result")
+	args = parser.parse_args()
+
+	dt = DataTransform(path=args.input_path, sep='\t', input_encoding='UTF-16LE')
+	dt.set_delimiter("|").set_encoding("utf-8").save(args.output_path)
